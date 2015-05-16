@@ -10,20 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    //add a button
-    let button = UIButton()
+    @IBOutlet weak var button:UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //register a event when button did touch up inside
-        button.addTarget(self, action: "buttonDidTap:", forControlEvents: UIControlEvents.TouchUpInside)
-        
     }
     
     
-    func buttonDidTap(sender:AnyObject){
+    @IBAction func buttonDidTap(sender:AnyObject){
         //when button did tap, do something
     }
     

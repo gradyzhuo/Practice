@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="klv-LK-RgC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Mwd-vJ-D63">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -23,10 +23,79 @@
             </objects>
             <point key="canvasLocation" x="1087" y="1094"/>
         </scene>
+        <!--Demo Make MyButton2-->
+        <scene sceneID="tlo-2a-qng">
+            <objects>
+                <viewController id="Mwd-vJ-D63" userLabel="Demo Make MyButton2" customClass="DemoMakeMyButtonsViewController" customModule="ScrollViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qzr-GD-Qvz"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZIx-KG-dEY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P6B-Zv-mb4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pP5-v1-6ZX" customClass="MyButton2" customModule="ScrollViewTest" customModuleProvider="target">
+                                <rect key="frame" x="205" y="120" width="191" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="K4B-pM-NpZ"/>
+                                    <constraint firstAttribute="width" constant="191" id="rFt-RS-qfR"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="做一個自已的按鈕，按下去的時候會改變BackgroundColor成紅色，反之取消(繼承UIView)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZ0-sB-509">
+                                <rect key="frame" x="7" y="50" width="577" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" constant="21" id="EGI-DA-O47"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="da6-IC-CnZ" customClass="MyButton3" customModule="ScrollViewTest" customModuleProvider="target">
+                                <rect key="frame" x="205" y="282" width="191" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="191" id="QlX-X7-Azl"/>
+                                    <constraint firstAttribute="height" constant="35" id="y0g-4a-8cE"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="myButton3DidTap:" destination="Mwd-vJ-D63" eventType="touchUpInside" id="6Ub-dY-0g5"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="做一個自已的按鈕，按下去的時候會改變BackgroundColor成紅色，反之取消(繼承UIControl)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7E-QS-2gA">
+                                <rect key="frame" x="12" y="218" width="577" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" constant="21" id="TeI-n1-OKr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tZ0-sB-509" secondAttribute="trailing" constant="16" id="Fey-9n-lpw"/>
+                            <constraint firstItem="tZ0-sB-509" firstAttribute="leading" secondItem="P6B-Zv-mb4" secondAttribute="leading" constant="7" id="IAh-Z1-la5"/>
+                            <constraint firstItem="pP5-v1-6ZX" firstAttribute="top" secondItem="tZ0-sB-509" secondAttribute="bottom" constant="29.5" id="Lav-TB-Bin"/>
+                            <constraint firstItem="tZ0-sB-509" firstAttribute="top" secondItem="Qzr-GD-Qvz" secondAttribute="bottom" constant="30" id="YpQ-FE-ITC"/>
+                            <constraint firstAttribute="centerX" secondItem="pP5-v1-6ZX" secondAttribute="centerX" id="Yzr-JK-6Ak"/>
+                            <constraint firstAttribute="centerX" secondItem="da6-IC-CnZ" secondAttribute="centerX" id="csM-DI-xVE"/>
+                            <constraint firstAttribute="trailing" secondItem="q7E-QS-2gA" secondAttribute="trailing" constant="11" id="dlW-xx-gEh"/>
+                            <constraint firstItem="da6-IC-CnZ" firstAttribute="top" secondItem="q7E-QS-2gA" secondAttribute="bottom" constant="23" id="h12-Re-OEr"/>
+                            <constraint firstItem="q7E-QS-2gA" firstAttribute="leading" secondItem="P6B-Zv-mb4" secondAttribute="leading" constant="12" id="keA-vh-ogU"/>
+                            <constraint firstItem="q7E-QS-2gA" firstAttribute="top" secondItem="pP5-v1-6ZX" secondAttribute="bottom" constant="62.5" id="zvP-va-LAN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nrB-La-TsZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="-240"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="XPp-CT-7vk">
             <objects>
-                <viewController id="klv-LK-RgC" sceneMemberID="viewController">
+                <viewController id="klv-LK-RgC" customClass="ViewController" customModule="ScrollViewTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HZ6-GF-yBa"/>
                         <viewControllerLayoutGuide type="bottom" id="WFa-0X-Nna"/>
@@ -37,9 +106,17 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Tx-Gi-Ekg">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kr3-UO-zFb">
+                                        <rect key="frame" x="251" y="102" width="46" height="30"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.47949570982611067" blue="0.38463427552866014" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="WFa-0X-Nna" firstAttribute="top" secondItem="2Tx-Gi-Ekg" secondAttribute="bottom" id="IY8-0Z-qtr"/>
                             <constraint firstItem="2Tx-Gi-Ekg" firstAttribute="top" secondItem="nNI-Mb-Fa0" secondAttribute="top" id="TAw-6m-9UZ"/>
