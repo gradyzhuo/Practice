@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		79629E351B075F8700EEEB4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79629E341B075F8700EEEB4C /* AppDelegate.swift */; };
-		79629E371B075F8700EEEB4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79629E361B075F8700EEEB4C /* ViewController.swift */; };
 		79629E3A1B075F8700EEEB4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79629E381B075F8700EEEB4C /* Main.storyboard */; };
 		79629E3C1B075F8700EEEB4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79629E3B1B075F8700EEEB4C /* Images.xcassets */; };
 		79629E3F1B075F8700EEEB4C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79629E3D1B075F8700EEEB4C /* LaunchScreen.xib */; };
@@ -17,6 +16,7 @@
 		79629E571B076C2300EEEB4C /* MyButton2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79629E561B076C2300EEEB4C /* MyButton2.swift */; };
 		79629E591B076E3E00EEEB4C /* MyButton3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79629E581B076E3E00EEEB4C /* MyButton3.swift */; };
 		79629E5B1B076F8D00EEEB4C /* DemoMakeMyButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79629E5A1B076F8D00EEEB4C /* DemoMakeMyButtonsViewController.swift */; };
+		79629E5E1B0771EF00EEEB4C /* DemoScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79629E5D1B0771EF00EEEB4C /* DemoScrollViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +33,6 @@
 		79629E2F1B075F8700EEEB4C /* ScrollViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79629E331B075F8700EEEB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79629E341B075F8700EEEB4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79629E361B075F8700EEEB4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		79629E391B075F8700EEEB4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79629E3B1B075F8700EEEB4C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		79629E3E1B075F8700EEEB4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -44,6 +43,7 @@
 		79629E561B076C2300EEEB4C /* MyButton2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyButton2.swift; sourceTree = "<group>"; };
 		79629E581B076E3E00EEEB4C /* MyButton3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyButton3.swift; sourceTree = "<group>"; };
 		79629E5A1B076F8D00EEEB4C /* DemoMakeMyButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoMakeMyButtonsViewController.swift; sourceTree = "<group>"; };
+		79629E5D1B0771EF00EEEB4C /* DemoScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoScrollViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +85,9 @@
 		79629E311B075F8700EEEB4C /* ScrollViewTest */ = {
 			isa = PBXGroup;
 			children = (
+				79629E5F1B0771F800EEEB4C /* Demo Scroll view */,
 				79629E5C1B076F9000EEEB4C /* Demo MyButtons */,
 				79629E341B075F8700EEEB4C /* AppDelegate.swift */,
-				79629E361B075F8700EEEB4C /* ViewController.swift */,
 				79629E381B075F8700EEEB4C /* Main.storyboard */,
 				79629E3B1B075F8700EEEB4C /* Images.xcassets */,
 				79629E3D1B075F8700EEEB4C /* LaunchScreen.xib */,
@@ -130,6 +130,14 @@
 				79629E581B076E3E00EEEB4C /* MyButton3.swift */,
 			);
 			name = "Demo MyButtons";
+			sourceTree = "<group>";
+		};
+		79629E5F1B0771F800EEEB4C /* Demo Scroll view */ = {
+			isa = PBXGroup;
+			children = (
+				79629E5D1B0771EF00EEEB4C /* DemoScrollViewController.swift */,
+			);
+			name = "Demo Scroll view";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,11 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79629E371B075F8700EEEB4C /* ViewController.swift in Sources */,
 				79629E351B075F8700EEEB4C /* AppDelegate.swift in Sources */,
 				79629E591B076E3E00EEEB4C /* MyButton3.swift in Sources */,
 				79629E571B076C2300EEEB4C /* MyButton2.swift in Sources */,
 				79629E551B076AE700EEEB4C /* MyButton.swift in Sources */,
+				79629E5E1B0771EF00EEEB4C /* DemoScrollViewController.swift in Sources */,
 				79629E5B1B076F8D00EEEB4C /* DemoMakeMyButtonsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

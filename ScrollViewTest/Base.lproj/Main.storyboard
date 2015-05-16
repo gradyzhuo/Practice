@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Mwd-vJ-D63">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="klv-LK-RgC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="340" y="-240"/>
         </scene>
-        <!--View Controller-->
+        <!--Demo Scroll View Controller-->
         <scene sceneID="XPp-CT-7vk">
             <objects>
-                <viewController id="klv-LK-RgC" customClass="ViewController" customModule="ScrollViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="klv-LK-RgC" customClass="DemoScrollViewController" customModule="ScrollViewTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HZ6-GF-yBa"/>
                         <viewControllerLayoutGuide type="bottom" id="WFa-0X-Nna"/>
@@ -104,26 +104,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Tx-Gi-Ekg">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Tx-Gi-Ekg">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kr3-UO-zFb">
-                                        <rect key="frame" x="251" y="102" width="46" height="30"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                </subviews>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="zEQ-u1-Lik">
+                                <rect key="frame" x="280" y="543" width="39" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Bfr-y4-c2I"/>
+                                    <constraint firstAttribute="width" constant="39" id="e4f-sP-CeK"/>
+                                </constraints>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13H-De-aIO">
+                                <rect key="frame" x="10" y="285" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0FV-tj-Miw"/>
+                                    <constraint firstAttribute="width" constant="46" id="sfz-oY-coA"/>
+                                </constraints>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftPage:" destination="klv-LK-RgC" eventType="touchUpInside" id="oy4-Zn-twV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imi-KN-d3l">
+                                <rect key="frame" x="560" y="285" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NLU-xZ-xpp"/>
+                                    <constraint firstAttribute="width" constant="30" id="OSU-OP-7Gs"/>
+                                </constraints>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightPage:" destination="klv-LK-RgC" eventType="touchUpInside" id="PYC-4I-pWl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.47949570982611067" blue="0.38463427552866014" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="13H-De-aIO" secondAttribute="centerY" id="0Hs-bY-vZL"/>
                             <constraint firstItem="WFa-0X-Nna" firstAttribute="top" secondItem="2Tx-Gi-Ekg" secondAttribute="bottom" id="IY8-0Z-qtr"/>
+                            <constraint firstItem="WFa-0X-Nna" firstAttribute="top" secondItem="zEQ-u1-Lik" secondAttribute="bottom" constant="20" id="KOz-3n-KaJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Imi-KN-d3l" secondAttribute="trailing" constant="10" id="PNp-Zw-Zvs"/>
                             <constraint firstItem="2Tx-Gi-Ekg" firstAttribute="top" secondItem="nNI-Mb-Fa0" secondAttribute="top" id="TAw-6m-9UZ"/>
+                            <constraint firstAttribute="centerX" secondItem="zEQ-u1-Lik" secondAttribute="centerX" id="b6t-VU-Geh"/>
+                            <constraint firstAttribute="centerY" secondItem="Imi-KN-d3l" secondAttribute="centerY" id="j6m-XP-d0f"/>
                             <constraint firstAttribute="trailing" secondItem="2Tx-Gi-Ekg" secondAttribute="trailing" id="rqM-uq-vtv"/>
+                            <constraint firstItem="13H-De-aIO" firstAttribute="leading" secondItem="nNI-Mb-Fa0" secondAttribute="leading" constant="10" id="sS6-Nv-aRs"/>
                             <constraint firstItem="2Tx-Gi-Ekg" firstAttribute="leading" secondItem="nNI-Mb-Fa0" secondAttribute="leading" id="svu-0I-M7o"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="zEQ-u1-Lik" id="Edl-MJ-YZw"/>
+                        <outlet property="scrollView" destination="2Tx-Gi-Ekg" id="c34-uY-WW4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DIG-Sd-wOH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
